@@ -1,7 +1,6 @@
 // JS Revise
 
 
-
 // 1. Hoisting - Hoisting is a behavior in JavaScript where variable and function declarations are moved to the top of their containing scope during the compilation phase before the code is executed.
 
 // console.log(myVar); // Output: undefined
