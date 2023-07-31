@@ -1,0 +1,30 @@
+<!-- Property Binding -->
+<h1>Topic 2 : Binding</h1>
+<p [innerHtml]="text"></p>
+<p [textContent]="text"></p>
+
+<!-- Different ways to bind an image -->
+<img [src]="website.logo" alt="img"/>
+<img bind-src="website.logo" alt="img"/>
+<img src={{website.logo}} alt="img"/>
+
+
+<!-- To write class for css using property binding -->
+<p [ngClass]="redText">{{website.loginTitle}}</p>
+
+
+<!-- Diff bw String interpolation and Property binding -->
+
+<input type="text" [disabled]="isTrue" value={{text}}/>
+<br/><br/>
+<input type="text" disabled="{{isTrue}}" value={{text}}/>
+<br/><br/>
+<button (click)="changeDisable()">Edit</button>
+<br/><br/>
+
+<!-- 2 way data binding -->
+
+<p>2 way data binding</p>
+
+<input type="text" [(ngModel)]="username" />
+<p>Current Username: {{ username }}</p>

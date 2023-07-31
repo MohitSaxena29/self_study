@@ -1,0 +1,81 @@
+<h1>Topic 3 : Directives</h1>
+
+
+<h2>Arr</h2>
+<ul *ngFor="let items of myArr">
+    <li>{{items}}</li>
+</ul>
+<h2>Array of Obj</h2>
+<ul *ngFor="let items of myObj">
+    <li>{{items.name}}</li>
+    <li>{{items.age}}</li>
+</ul>
+
+<br/><br/>
+
+
+
+<!-- *ngIf -->
+
+<h2>*ngIf</h2>
+<!-- if -->
+<div *ngIf="isRight then loginBlock else elseBlock">
+    <h2>Logged In</h2>
+</div>
+<!-- else -->
+<ng-template #elseBlock>
+    <h2>Not logged in</h2>
+</ng-template>
+<!-- then -->
+<!-- In then block when if condition is true then it prints then block ng-template and leaves the content of if block unprinted -->
+<ng-template #loginBlock>
+    <h2>Welcome Back</h2>
+</ng-template>
+
+
+<!-- if -->
+<div *ngIf="name==='Mohit' then loginBlock else elseBlock">
+    <h2>Logged In</h2>
+</div>
+<!-- else -->
+<ng-template #elseBlock>
+    <h2>Not logged in</h2>
+</ng-template>
+<!-- then -->
+<!-- In then block when if condition is true then it prints then block ng-template and leaves the content of if block unprinted -->
+<ng-template #loginBlock>
+    <h2>Welcome Back</h2>
+</ng-template>
+
+
+<!-- *ngIf with property binding and hidden -->
+<h2>ngIf with property binding</h2>
+<ng-template [ngIf]="isRight" [ngIfElse]="logoutBlock">
+    <h2>Logged In</h2>
+</ng-template>
+<!-- this hidden block when condition is false is not visible in frontend screen but if we inspect we can see hidden block there -->
+<div [hidden]="!isRight">
+    <h2>Welcome Back</h2>
+</div>
+<ng-template #logoutBlock>
+    <h2>Logged Out</h2>
+</ng-template>
+
+
+<!-- *ngSwitch -->
+
+<h2>*ngSwitch</h2>
+
+<select (change)="selectEvent($event)">
+    <option>Select Color</option>
+    <option value="red">red</option>
+    <option value="green">green</option>
+    <option value="blue">blue</option>
+</select>
+
+<div [ngSwitch]="choice">
+    <h2 *ngSwitchCase="'red'">Red color</h2>
+    <h2 *ngSwitchCase="'green'">Green color</h2>
+    <h2 *ngSwitchCase="'blue'">Blue color</h2>
+    <h2 *ngSwitchDefault>No color selected</h2>
+</div>

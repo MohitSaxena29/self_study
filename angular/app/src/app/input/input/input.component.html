@@ -1,0 +1,18 @@
+<div class="container">
+    <h1>Topic 1: Input Field</h1>
+  
+    <div class="button-container">
+      <button (click)="myEvent('Hii')">Click me</button>
+      <button (click)="myEvent('Hiii')">Click me</button>
+    </div>
+  
+    <div class="input-container">
+      <input type="text" #textId (keyup)="MyEvent1(textId.value)" placeholder="keyup" />
+      <input type="text" #textIdOne (keyup.enter)="MyEvent1(textIdOne.value)" placeholder="keyup enter" />
+      <input type="text" #textIdTwo (keyup.space)="MyEvent1(textIdTwo.value)" placeholder="keyspace enter" />
+      <!-- <h2 (mouseover)="myEvent('MouseOverEvent')">Mouse Over</h2> -->
+      <input type="text" #textIdThree (keyup.enter)="MyEvent2(textIdThree.value)" placeholder="Display" />
+      <p>Data Entered: {{ display }}</p>
+    </div>
+  </div>
+  

@@ -375,7 +375,7 @@ console.log(person2);
 
 
 // 16. BOM?
-// BOM stands for Browser Object Model. It is a JavaScript API that provides access to various features and functionalities of web browsers.
+// BOM stands for Browser Object Model. It allows users to interact with the browser.  It is a JavaScript API that provides access to various features and functionalities of web browsers.
 
 
 
