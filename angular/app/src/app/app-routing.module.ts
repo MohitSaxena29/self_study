@@ -4,6 +4,7 @@ import { LoginComponent } from './registration/login/login.component';
 import { SignupComponent } from './registration/signup/signup.component';
 import { HomeComponent } from './home/home.component';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,15 @@ const routes: Routes = [
   },
   {
     path:'signup',component:SignupComponent
+  },
+  {
+    path: 'profile' ,component: ProfileComponent 
+  },
+  {
+    path: 'profile/:name',component:ProfileComponent
+  },
+  {
+    path: 'profile/:name/:id',component:ProfileComponent
   },
   {
     path:'**',

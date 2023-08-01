@@ -12,12 +12,17 @@ import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { BindingComponent } from './binding/binding/binding.component';
 import { DirectiveComponent } from './directives/directive/directive.component';
 import { InputComponent } from './input/input/input.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { LogicalTrackbyComponent } from './logical-trackby/logical-trackby/logical-trackby.component';
 import { RoutingComponent } from './routing/routing/routing.component';
+import { ProfileComponent } from './profile/profile.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BootstrapComponent } from './bootstrap/bootstrap/bootstrap.component';
+import { TemplateFormComponent } from './forms/template-form/template-form.component';
+import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.component';
 @NgModule({
-  declarations: [AppComponent, CustompipePipe, LoginComponent, SignupComponent, HomeComponent, ErrorpageComponent, BindingComponent, DirectiveComponent, InputComponent, LogicalTrackbyComponent, RoutingComponent],
-  imports: [BrowserModule, AppRoutingModule, RegistrationModule,FormsModule],
+  declarations: [AppComponent, CustompipePipe, LoginComponent, SignupComponent, HomeComponent, ErrorpageComponent, BindingComponent, DirectiveComponent, InputComponent, LogicalTrackbyComponent, RoutingComponent, ProfileComponent, BootstrapComponent, TemplateFormComponent, ReactiveFormComponent],
+  imports: [BrowserModule, AppRoutingModule, RegistrationModule,FormsModule, NgbModule,ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
