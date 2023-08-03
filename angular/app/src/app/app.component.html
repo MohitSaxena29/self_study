@@ -47,6 +47,45 @@
 <p>{{name}}</p>
 <p>{{address}}</p>
 
+<!-- Api -->
+
+<h1> Topic : 9 Api</h1>
+<div class="text-align:center">
+    <h2>Api calling</h2>
+    <table border="1" style="border-collapse: collapse; width: 100%;">
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Phone</td>
+            <td>UserName</td>
+            <td>Website</td>
+            <td>Company</td>
+            <td>Address</td>
+        </tr>
+        <tr *ngFor="let user of userData$ | async">
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.phone}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.website}}</td>
+            <td>{{user.company.name}}</td>
+            <td>{{user.address.street}},{{user.address.city}},{{user.address.zipcode}}</td>
+        </tr>
+    </table>
+</div>
+
+
+
+<h1> Topic : 10 Module loading (Eager,Lazy,Pre)</h1>
+
+<div style="text-align: center;">
+    <h1>Module Loading in Angular</h1>
+    <a routerLink="customer">Customer</a>
+    <a routerLink="order">Order</a>
+</div>
+
 
  <app-logins [loginTitle]="website.loginTitle"></app-logins>
  <router-outlet></router-outlet>
