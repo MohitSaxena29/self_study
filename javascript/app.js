@@ -281,15 +281,16 @@ function operationOnSum(num1, num2, operation) {
   operation(sum);
 }
 
-operationOnSum(3, 3, (result1) => {
+operationOnSum(3, 3, function(result1) {
   divideByHalf(result1);
-  operationOnSum(5, 5, (result2) => {
+  operationOnSum(5, 5, function(result2) {
     multiplyBy2(result2);
-    operationOnSum(10, 10, (result3) => {
+    operationOnSum(10, 10, function(result3) {
       divideByHalf(result3);
     });
   });
 });
+
 
 
 
@@ -568,3 +569,91 @@ const ans = fetchData().then((value) => {
   console.log(value); // ans
 });
 console.log(ans);
+
+
+
+//23 . First Class Functions
+
+/*
+First-class functions in JavaScript refer to the language's ability to treat functions as first-class citizens, which means functions are treated as values and can be used in the same way as other types of data, such as numbers, strings, or objects. 
+*/
+
+const greet = function(name) {
+  return `Hello, ${name}!`;
+};
+
+console.log(greet("Alice")); // Output: Hello, Alice!
+
+
+// 24. Loops in JavaScript
+
+/*
+Standard "for" loop:
+The standard "for" loop is the most commonly used loop in JavaScript. It has three parts: initialization, condition, and increment/decrement.
+*/
+
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+
+
+
+/*
+"for...of" loop:
+The "for...of" loop is used to iterate over iterable objects like arrays, strings, maps, sets, etc.
+
+*/
+
+const array = [1, 2, 3, 4, 5];
+for (const element of array) {
+  console.log(element);
+}
+
+
+
+/*
+"for...in" loop:
+The "for...in" loop is used to iterate over the properties of an object. It enumerates the keys (property names) of an object.
+*/
+
+
+const persons = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+
+for (const key in persons) {
+  console.log(key, persons[key]);
+}
+
+
+
+/*
+while" loop:
+The "while" loop executes a block of code while a specified condition is true.
+*/
+
+let e = 0;
+while (e < 5) {
+  console.log(e);
+  e++;
+}
+
+
+
+/*
+"do...while" loop:
+The "do...while" loop is similar to the "while" loop, but it guarantees that the loop body is executed at least once before checking the condition.
+*/
+
+
+let i = 0;
+do {
+  console.log(i);
+  i++;
+} while (i < 5);
+
+/*
+Usage: It is useful when you need to ensure that a certain operation is performed at least once before checking the exit condition.
+*/
