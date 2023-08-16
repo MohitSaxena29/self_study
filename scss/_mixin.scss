@@ -1,0 +1,11 @@
+@mixin flexprob{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    place-items: center;  
+}
+@mixin commoncode($part1){
+    color: #222f3e;
+    font-size: $part1;
+
+}
