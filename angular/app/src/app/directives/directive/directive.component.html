@@ -66,7 +66,7 @@
 
 <h2>*ngSwitch</h2>
 
-<select (change)="selectEvent($event)">
+<!-- <select (change)="selectEvent($event)">
     <option>Select Color</option>
     <option value="red">red</option>
     <option value="green">green</option>
@@ -78,4 +78,15 @@
     <h2 *ngSwitchCase="'green'">Green color</h2>
     <h2 *ngSwitchCase="'blue'">Blue color</h2>
     <h2 *ngSwitchDefault>No color selected</h2>
+</div> -->
+<div [ngSwitch]="choice">
+    <h2 *ngSwitchCase="'red'">red color</h2>
+    <h2 *ngSwitchCase="'blue'">blue color</h2>
+    <h2 *ngSwitchCase="'green'">green color</h2>
 </div>
+<select (change)="selectEvent($event)">
+    <option value="red">Red</option>
+    <option value="blue">Blue</option>
+    <option value="green">Green</option>
+</select>
+
